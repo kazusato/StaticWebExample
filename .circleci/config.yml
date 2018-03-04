@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Sync contents to S3
-        command: aws s3 sync www/ s3://labks-staticweb --delete
+          name: Sync contents to S3
+          command: aws s3 sync www/ s3://labks-staticweb --delete
 workflows:
   version: 2
   deploy-contents:
