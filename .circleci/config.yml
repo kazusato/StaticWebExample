@@ -5,6 +5,7 @@ jobs:
       enabled: true
     working_directory: ~/StaticWebExample
     steps:
+      - checkout
       - run:
         name: Sync contents to S3
         command: aws s3 sync www/ s3://labks-staticweb --delete
